@@ -411,3 +411,68 @@
     font-size: 18px;
   }
 }
+
+/* ─── Transition Text (black screen reveal) ─── */
+.transition-text {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  text-align: center;
+}
+
+.transition-line1,
+.transition-line2 {
+  display: block;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: clamp(22px, 4vw, 52px);
+  font-weight: 200;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: transitionLineIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.transition-line1 {
+  animation-delay: 0.05s;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: clamp(13px, 2vw, 26px);
+  letter-spacing: 0.55em;
+}
+
+.transition-line2 {
+  animation-delay: 0.18s;
+}
+
+.transition-line2 em {
+  font-style: normal;
+  font-weight: 600;
+  background: linear-gradient(90deg, #14b8a6, #a78bfa, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 18px rgba(167, 139, 250, 0.7));
+  animation: nameGlow 1.8s ease-in-out infinite alternate;
+  animation-delay: 0.4s;
+}
+
+@keyframes transitionLineIn {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes nameGlow {
+  from {
+    filter: drop-shadow(0 0 8px rgba(167, 139, 250, 0.5));
+  }
+
+  to {
+    filter: drop-shadow(0 0 28px rgba(232, 121, 249, 0.95));
+  }
+}

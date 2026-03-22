@@ -8,8 +8,8 @@ export function initialFX() {
   document.getElementsByTagName("main")[0].classList.add("main-active");
   gsap.to("body", {
     backgroundColor: "#0a0e17",
-    duration: 0.5,
-    delay: 1,
+    duration: 0.3,
+    delay: 0,
   });
 
   var landingText = new SplitText(

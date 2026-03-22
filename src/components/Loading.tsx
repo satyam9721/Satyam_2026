@@ -15,8 +15,8 @@ const Loading = ({ percent }: { percent: number }) => {
       setLoaded(true);
       setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
-    }, 600);
+      }, 400);
+    }, 300);
   }
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const Loading = ({ percent }: { percent: number }) => {
             module.initialFX();
           }
           setIsLoading(false);
-        }, 900);
+        }, 400);
       }
     });
   }, [isLoaded]);
@@ -46,7 +46,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          RC
+          SG
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
@@ -71,6 +71,12 @@ const Loading = ({ percent }: { percent: number }) => {
           onMouseMove={(e) => handleMouseMove(e)}
         >
           <div className="loading-hover"></div>
+          {clicked && (
+            <div className="transition-text">
+              <span className="transition-line1">New World is Building.Please Wait...</span>
+              <span className="transition-line2"> By <em>Satyam </em></span>
+            </div>
+          )}
           <div className={`loading-button ${loaded && "loading-complete"}`}>
             <div className="loading-container">
               <div className="loading-content">
@@ -103,12 +109,12 @@ export const setProgress = (setLoading: (value: number) => void) => {
     } else {
       clearInterval(interval);
       interval = setInterval(() => {
-        percent = percent + Math.round(Math.random());
+        percent = percent + Math.round(Math.random() * 2 + 1);
         setLoading(percent);
         if (percent > 91) {
           clearInterval(interval);
         }
-      }, 2000);
+      }, 120);
     }
   }, 100);
 

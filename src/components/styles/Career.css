@@ -49,6 +49,8 @@
   font-size: 18px;
   font-weight: 300;
   margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
 }
 
 .career-info-in {
@@ -63,6 +65,7 @@
   margin: 0;
   font-weight: 500;
   line-height: 45px;
+  color: #ffffff;
 }
 
 .career-info h4 {
@@ -71,6 +74,7 @@
   letter-spacing: 0.8px;
   font-weight: 500;
   margin: 0;
+  color: #ffffff;
 }
 
 .career-info h5 {

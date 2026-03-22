@@ -1,3 +1,4 @@
+/* ── Outer glowing ring (trails slightly behind) ── */
 .cursor-main {
   --size: 0px;
   position: fixed;
@@ -5,29 +6,63 @@
   left: calc(var(--size) / -2);
   width: var(--size);
   height: var(--size);
-  border-radius: 50px;
+  border-radius: 50%;
   pointer-events: none;
-  z-index: 99;
-  background-color: #e6c3ff;
-  box-shadow: 0px 0px 30px 0px rgb(175, 131, 255);
-  mix-blend-mode: difference;
-  transition: top 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out,
-    height 0.3s ease-out;
+  z-index: 9998;
+  background-color: rgba(210, 160, 255, 0.15);
+  border: 2px solid rgba(190, 130, 255, 0.85);
+  box-shadow:
+    0 0 12px 4px rgba(175, 100, 255, 0.6),
+    0 0 30px 8px rgba(140, 60, 255, 0.35);
+  mix-blend-mode: normal;
+  transition: top 0.12s ease-out, left 0.12s ease-out,
+    width 0.15s ease-out, height 0.15s ease-out,
+    box-shadow 0.15s ease-out, background-color 0.15s ease-out;
 }
+
+/* ── Inner dot (snaps instantly to mouse) ── */
+.cursor-dot {
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d580ff;
+  box-shadow: 0 0 8px 3px rgba(200, 100, 255, 0.9);
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.12s ease;
+}
+.dot-disable {
+  opacity: 0;
+}
+
+/* ── Icons hover state ── */
 .cursor-icons {
   top: 10px;
   left: 10px;
   height: calc(var(--cursorH) - 20px);
-  transition: all 0.5s ease-out, height 0.5s ease-in-out;
+  background-color: rgba(180, 100, 255, 0.2);
+  box-shadow:
+    0 0 18px 6px rgba(175, 100, 255, 0.7),
+    0 0 40px 12px rgba(140, 60, 255, 0.4);
+  transition: all 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+/* ── Disabled (over links/buttons) ── */
 .cursor-disable {
   --size: 0px;
+  box-shadow: none;
 }
+
 @media only screen and (min-width: 600px) {
   .cursor-main {
-    --size: 50px;
+    --size: 44px;
   }
   .cursor-disable {
     --size: 0px;
   }
 }
+

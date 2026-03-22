@@ -5,34 +5,40 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
+    title: "OTT Platform (Live)",
+    category: "Movies & Webseries",
+    tools: "React.js,API Intergation,SCSS",
     image: "/images/Solidx.png",
+    //https://6569910923ead56be689edcc--stately-quokka-c984f0.netlify.app/
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
+    title: "Hospital Management System ",
+    category: "Full-Stack",
+    tools: "React.js,API Intergation,MongoDB,Node.js,Express.js,JWT",
     image: "/images/radix.png",
+    //https://github.com/satyam9721/Hospital_Management.git
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
-  },
-  {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
+    title: "Extractify-PDF",
+    category: "Documents Extraction",
+    tools: "React.js,API Intergation,Express.js,Node.js",
     image: "/images/sapphire.png",
+    //https://6555b06795b68643a7ae964d--jazzy-druid-d5048a.netlify.app/
   },
   {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
+    title: "ATS",
+    category: "Recruitment Platform",
+    tools: "Python,streamlit,Workflows,sklearn,base64",
+    image: "/images/bond.png",
+    //https://ats-2025-ytttqhwd4hxfp7dki7d2bs.streamlit.app/
+  },
+
+  {
+    title: "OOPs-Project",
+    category: "Animal-Table",
+    tools: "Java,Opps",
     image: "/images/Maxlife.png",
+    //https://poetic-tartufo-0617ab.netlify.app/
   },
 ];
 
