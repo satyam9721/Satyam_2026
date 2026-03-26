@@ -1,15 +1,9 @@
-# 🌐 My Portfolio Website
+# My Portfolio Wesbite - Overview 🚀
 
-🚀 Welcome to the open-source repository of my personal portfolio website.  
-Built with modern web technologies to showcase my projects, skills, and creativity.
+This repository contains the open source version of my porfolio website.
+Do check it out!
 
----
-
-## ✨ Live Preview
-
-Check out the portfolio and explore my work!
-
-## 📦 Getting Started (Run Locally)
+TO RUN IN Local =>
 
 Follow these steps to run the project on your local machine:
 
@@ -20,17 +14,18 @@ npm install
 # Start development server
 npm run dev
 
-## 🛠️ Tech Stack
+<!-- ## Instructions 🛠️
 
+I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/ -->
+
+**Techstack** - 
 - ⚛️ React.js  
 - 🟦 TypeScript  
 - 🎞️ GSAP (Animations)  
 - 🌌 Three.js & WebGL  
-- 🌐 HTML5, CSS3, JavaScript  
+- 🌐 HTML5, CSS3, JavaScript
 
----
-
-
+# <!-- ![Portfolio-Preview](public/images/preview.png) -->
 ![Portfolio-Preview](public/images/satyam1.jpeg)
 ![Portfolio-Preview](public/images/satyam2.jpeg)
 ![Portfolio-Preview](public/images/satyam3.jpeg)
